@@ -79,7 +79,7 @@ const Calculator = () => {
                 />
                 <label
                   htmlFor={option}
-                  className="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                  className="ml-3 block text-sm/6 font-medium text-gray-900"
                 >
                   {option}%
                 </label>
