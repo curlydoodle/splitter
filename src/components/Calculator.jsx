@@ -61,30 +61,32 @@ const Calculator = () => {
             </div>
           </div>
         </div>
-        <div>
-          <label
-            htmlFor="tip"
-            className="block text-sm/6 font-medium text-gray-900"
-          >
+        <fieldset>
+          <legend className="block text-sm/6 font-medium text-gray-900">
             Select tip %
-          </label>
-          <div className="mt-2">
-            <select
-              id="tip"
-              required
-              value={tip}
-              onChange={(event) => setTip(event.target.value)}
-              onBlur={(event) => event.target.reportValidity()}
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm/6"
-            >
-              {tipOptions.map((tip) => (
-                <option key={tip} value={tip}>
-                  {tip}%
-                </option>
-              ))}
-            </select>
+          </legend>
+          <div className="mt-2 grid grid-cols-5 gap-3">
+            {tipOptions.map((option) => (
+              <div key={option} className="flex items-center">
+                <input
+                  type="radio"
+                  id={option}
+                  name="tip"
+                  value={option}
+                  onChange={(event) => setTip(event.target.value)}
+                  defaultChecked={option === tip}
+                  className="h-4 w-4 border-gray-300 text-green-600 focus:ring-green-600"
+                />
+                <label
+                  htmlFor={option}
+                  className="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                >
+                  {option}%
+                </label>
+              </div>
+            ))}
           </div>
-        </div>
+        </fieldset>
         <div>
           <label
             htmlFor="peopleCount"
