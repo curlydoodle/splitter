@@ -42,19 +42,19 @@ const Calculator = () => {
               value={bill}
               onChange={(event) => setBill(event.target.value)}
               onBlur={(event) => event.target.reportValidity()}
-              className="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+              className="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm/6"
               placeholder="0.00"
             />
             <div className="absolute inset-y-0 right-0 flex items-center">
               <select
                 value={currency}
                 onChange={(event) => setCurrency(event.target.value)}
-                className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm"
                 aria-label="Currency"
               >
-                {currencyOptions.map((currency) => (
-                  <option key={currency} value={currency}>
-                    {currency}
+                {currencyOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
                   </option>
                 ))}
               </select>
@@ -106,7 +106,7 @@ const Calculator = () => {
               value={peopleCount}
               onChange={(event) => setPeopleCount(event.target.value)}
               onBlur={(event) => event.target.reportValidity()}
-              className="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+              className="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm/6"
               placeholder="0"
             />
           </div>
