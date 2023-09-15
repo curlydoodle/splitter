@@ -1,8 +1,12 @@
-const currencyFormatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-});
+export const formatCurrency = (value, currency) => {
+  const currencyFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+  });
 
-export const formatCurrency = (value) => currencyFormatter.format(value);
+  return currencyFormatter.format(value);
+};
 
 export const tipOptions = [5, 10, 15, 25, 50];
+
+export const currencyOptions = ["USD", "CAD", "EUR"];
